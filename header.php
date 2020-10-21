@@ -35,9 +35,9 @@
         		<nav class="main-navigation right-menu">
                     <ul id="menu-header-right-menu" class="menu nav-menu">
                         <li id="menu-item-258" class="fa-info-circle menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="#">Info</a></li>
-                        <li id="menu-item-259" class="fa-camera-retro menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="#">Gallery</a></li>
-                        <li id="menu-item-260" class="fa-envelope menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="#">Contact</a></li>
-                        <li id="menu-item-257" class="fa-calendar-check-o menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="#">Buy Now</a></li>
+                        <li id="menu-item-259" class="fa-envelope menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="#">Contact</a></li>
+                        <li id="menu-item-260" class="fa-sign-in menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="#">Login</a></li>
+                        <li id="menu-item-257" class="fa-user-plus menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="#">Register</a></li>
                     </ul>
                 </nav>
 			</div>
@@ -79,10 +79,10 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Buy Now</a>
+                        <a class="nav-link" href="#">Register</a>
                     </li>
                 </ul>
             </div>

@@ -898,6 +898,9 @@ a:focus {
 .is-sticky .site-branding {
     padding: 0 0 65px 0;
 }
+.site-header{
+    margin-top: 10px;
+}
 .site-header.translate-header.is-sticky {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);

@@ -3,6 +3,7 @@
 
 */
 
+
 if(!function_exists('kids_education_setup')):
     /*
      Sets up theme defaults and registers support for various WordPress features
@@ -108,8 +109,7 @@ endif;
  * Enqueue scripts and styles.
  */
 function kids_education_scripts() {
-	// Get theme options
-	$options = kids_education_get_theme_options();
+	
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'kids-education-fonts', kids_education_fonts_url(), array(), null );
 
@@ -124,7 +124,12 @@ function kids_education_scripts() {
 
 	// Add slick-theme css
 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/assets/plugins/minified/css/slick-theme.min.css', array(), '' );
-
+    
+    //Add stylesheet css
+    wp_register_style('style', get_template_directory_uri() . '/style.css',
+    array(), false, 'all');
+    wp_enqueue_style('style');
+    
 	// Add jquery-sidr-light css
 	wp_enqueue_style( 'jquery-sidr-light', get_template_directory_uri() . '/assets/plugins/minified/css/jquery.sidr.light.min.css', array(), '' ); 
 
