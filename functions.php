@@ -179,4 +179,22 @@ function kids_education_scripts() {
 add_action( 'wp_enqueue_scripts', 'kids_education_scripts' );
 
 
+if( !function_exists('kids_game_pagination')){
+    function kids_game_pagination(){
+        if( $GLOBALS['wp_query'] ->max_num_pages < 2){
+            return '';
+        }?>
+        <nav class="pagination" role = "navigation"> 
+            <?php if( get_previous_posts_link()) : ?>
+                <div class="next"> <?php previous_posts_link( __(' < ','kidsgame')) ?> </div>
+            <?php endif ?> 
+            <?php if(get_next_posts_link()) : ?>
+                <div class="prev"> <?php next_posts_link( __(' > ','kidsgame')) ?> </div>
+            <?php endif ?>
+            
+        </nav>
+    <?php 
+    }
+}
+
 ?>

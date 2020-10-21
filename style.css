@@ -1,5 +1,5 @@
 /*
-Theme Name: Kids Education
+Theme Name: Kids Education new
 Author: Team 11
 Description: just a theme
 */
@@ -5913,4 +5913,78 @@ body.error404 .footer-divider {
 	.portfolio-item {
 	    width: 100% !important;
 	}
+}
+#main{
+    background-image: url("assets/uploads/team-bg.png");
+    background-repeat: no-repeat;
+    background-attachment: inherit;  
+    background-size: cover;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: -5%;
+}
+
+#main .table_point{
+    background-color: #64973A;
+    float: right;
+    width: 25%;
+}
+#main .content{
+    margin-top: 5%;
+    width: 72%;
+    padding: 2%;
+}
+
+#main .content .colum-2 {
+    margin-top: 2%;
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#main .content .colum-2 .colum-left{
+    width: 50%;
+    float: left;
+}
+
+#main .content .colum-2 .colum-right{
+    width: 50%;
+    float: right;
+}
+
+#main .content img{
+    width: 100px;
+    padding: 2px 2px;
+    border-radius: 100px;
+    border: solid 3px #00C6E1;
+}
+
+
+.content .pagination{
+    display: flex;
+}
+
+.content .pagination .prev{
+    float: right;
+    margin-left: 89%;
+    font-size: 60px;
+    border: solid 2px;
+    width: 62px;
+    text-align: center;
+    border-radius: 25px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 22px;
+}
+
+.content .pagination .next{
+    float: left;
+    font-size: 60px;
+    border: solid 2px;
+    width: 62px;
+    text-align: center;
+    border-radius: 25px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 26px;
 }
