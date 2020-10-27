@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/assets/css/font-awesome.min.css'; ?>">
     </head>
-<body 
+<body id="body"
     <?php body_class(); ?>>
 		<div id="page" class="site">
 			<div class="site-inner">

@@ -1,4 +1,7 @@
+const video = document.getElementById('video-play');
+console.log('loaded script')
 
-    $(document).ready(function() {
-         console.log("I am Manh!");
-    }
+function playvideo() {
+    video.play();
+    console.log(localStorage.getItem('game'))
+}
