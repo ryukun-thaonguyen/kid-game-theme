@@ -133,7 +133,7 @@ function kids_education_scripts() {
     //scripts 
     wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/preload.js',array(),false,'all');
 
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js',array(),'',true);
+    wp_enqueue_script( 'script-2', get_template_directory_uri() . '/assets/js/script.js',array(),false,'all');
     
     
 	// Add jquery-sidr-light css
