@@ -1,0 +1,77 @@
+/* Use variable in css */
+:root {
+    --single-content-height: 500px;
+}
+
+/* Content-single is all of sidebar and article*/
+#content-single {
+    position: relative;
+    height: var(--single-content-height);
+    margin: 200px 100px 30px 100px;
+    display: flex;
+}
+#content-single article {
+    position: relative;
+    width: 70%;
+    margin-right: 30px;
+}
+#content-single .sidebar {
+    height: var(--single-content-height);
+    width: 30%;
+    background-color: red;
+}
+
+
+article .full-width {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Code for title */
+article .full-width .entry-title {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.entry-title .game-title {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px 0;
+}
+.entry-title .game-action {
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.entry-title .game-action .btn-game-action {
+    max-height: 100%;
+    width: auto;
+
+}
+
+.entry-title .game-action .btn-add-favorite {
+    margin-right:  20px;
+}
+
+
+.entry-title .game-action .btn-full-screen {
+    
+}
+
+/* Code for iframe */
+article .full-width .frame {
+    position: relative;
+    height: 85%;
+    width: 100%;
+}
+
+.full-width .frame #id-iframe {
+    position: absolute;
+    height: 550px;
+    width: 100%;
+}
+
+

@@ -1,59 +1,10 @@
 /*
-Theme Name: Kids Education new
+Theme Name: moi nhat luoon
 Author: Team 11
 Description: just a theme
 */
 
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
-# Loader
-# Layouts and titles
-# Main slider
-# Find babysitter
-# School activities
-# Search course tab
-# Recent classes slider
-# Counter
-# Team members
-# Portfolio gallery
-# Client testimonial slider
-# Blog and news
-# Social icons
-# Map
-# Banner and breadcrumb
-# Shop
-# Courses List
-# Archive
-# Contact us
-# Error404
-# Blog
-# Single blog
-# Color switcher
-# Font selection
-# Footer
-# Responsive
-
---------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -163,10 +114,6 @@ img {
 
 svg:not(:root) {
     overflow: hidden;
-}
-
-figure {
-    margin: 1em 40px;
 }
 
 hr {
@@ -324,9 +271,6 @@ h6 {
     font-size: 24px;
 }
 
-p {
-    margin-bottom: 1.5em;
-}
 
 dfn,
 cite,
@@ -335,13 +279,6 @@ i {
     font-style: italic;
 }
 
-blockquote {
-    margin: 0 1.5em;
-}
-
-address {
-    margin: 0 0 1.5em;
-}
 
 pre {
     background: #eee;
@@ -484,22 +421,6 @@ dd a {
 # Forms
 --------------------------------------------------------------*/
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    border: 1px solid;
-    border-color: #ccc #ccc #bbb;
-    border-radius: 3px;
-    background: #e6e6e6;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, .8);
-    font-size: 12px;
-    font-size: 0.75rem;
-    line-height: 1;
-    padding: .6em 1em .4em;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
 
 button:hover,
 input[type="button"]:hover,
@@ -4878,9 +4799,9 @@ article.column-wrapper {
 }
 
 article .blog-post-wrap {
-    padding: 30px;
-    border-radius: 50px;
-    background-color: #70CEE5;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: none;
 }
 
 .hentry {
@@ -6925,22 +6846,31 @@ body.error404 .footer-divider {
     margin-top: 0%;
     border: 1px;
     background-size: 100% auto;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
 }
 
+/** animation starts */
+@keyframes example {
+    from {right:-200px; bottom:-100px ;opacity:0.1;}
+    to {right: 0px; top: 0px; opacity:1;}
+  }
+
 .content .game .game-header{
-    display: inline-flex;
-    width: 96%;
-    text-align: center;
-    align-items: center;
-    padding-left: 2%;
+    width: 110%;
+    /* text-align: center;
+    align-items: center; */
+    /* padding-left: 2%;
     padding-right: 2%;
     margin-bottom: -10%;
-    margin-top: 10%;
+    margin-top: 10%; */
+    margin: auto auto;
 
 }
 .content .game .game-header .name-game{
     width: 100%;
-    float: left;
 }
 .content .game .game-header .name-game p{
     font-size: 35px;
@@ -6953,19 +6883,7 @@ body.error404 .footer-divider {
 .content .game .game-header .name-game p:hover{
     font-size: 45px;
 }
-.content .game .game-header .icon-cancel{
-    width: 10%;
-    float: right;
-}
 
-.content .game .game-header .icon-cancel img{
-    width: 85%;
-    padding-top: -48%;
-    margin-top: -115%;
-    margin-right: -115%;
-    background-color: #52c575;
-    border-radius: 50px;
-}
 .content .game .game-header .icon-cancel img:hover{
     width: 95%;
     background-color: #fd7a41;

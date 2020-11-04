@@ -5,9 +5,6 @@
 				<p> <?php the_title(); ?> </p>
 			</a>
 		</div>
-		<div class= "icon-cancel">
-			<img src="<?php bloginfo( "template_directory" );?>/assets/uploads/cancel.png" alt="">
-		</div>
 	</div>
 	<div class= "game-conten">
 		<div> <?php the_post_thumbnail('thumbnail');?></div>

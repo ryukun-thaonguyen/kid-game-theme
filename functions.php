@@ -26,7 +26,17 @@ if(!function_exists('kids_education_setup')):
 
         add_theme_support( 'post-thumbnails' );
         add_theme_support('editor-styles');
-     	add_theme_support( 'wp-block-styles' );
+        add_theme_support( 'wp-block-styles' );
+        
+        /**
+        @ add theme support 
+        **/
+        add_theme_support('post-formats',array(
+            'image',
+            'gallery',
+            'link',
+            'iframe'
+        ));
     }
 endif;
 add_action( 'after_setup_theme', 'kids_education_setup' );
@@ -129,6 +139,14 @@ function kids_education_scripts() {
     wp_register_style('style', get_template_directory_uri() . '/style.css',
     array(), false, 'all');
     wp_enqueue_style('style');
+
+    /**
+        @ add style about reset  and content-single
+    **/
+    wp_enqueue_style( 'content-single-style', get_template_directory_uri() . '/assets/css/content-single.css', array(), '' );
+    wp_enqueue_style( 'reset-content-single-style', get_template_directory_uri() . '/assets/css/reset.css', array(), '' );
+
+
 
     //scripts 
     wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/preload.js',array(),false,'all');
