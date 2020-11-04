@@ -6890,7 +6890,7 @@ body.error404 .footer-divider {
         width: 100% !important;
     }
 }
-
+/*************************/
 #main {
     background-image: url("assets/uploads/team-bg.png");
     background-repeat: no-repeat;
@@ -6898,72 +6898,123 @@ body.error404 .footer-divider {
     background-size: cover;
     display: inline-flex;
     width: 100%;
+    height: auto;
     margin-bottom: -5%;
 }
 
-#main .table_point {
-    background-color: #64973A;
-    float: right;
-    width: 25%;
-}
-
 #main .content {
-    margin-top: 5%;
-    width: 72%;
+    position: absolute;
+    display: flex;
+    margin-top: 8%;
+    width: 66%;
     padding: 2%;
 }
 
-#main .content .colum-2 {
-    margin-top: 2%;
-    display: flex;
-    width: 50%;
-    margin-left: 25%;
+.content .achievements{
+    width: 35%;
+    background-color: red;
+}
+.content .game{
+    background-repeat: round;
+    background-attachment: inherit;
+    background-size: cover;
+    display: inline-flex;
+    background-image: url("assets/uploads/clouds.gif");
+    margin-left: 1%;
+    width: 64%;
+    margin-top: 0%;
+    border: 1px;
+    background-size: 100% auto;
 }
 
-#main .content .colum-2 .colum-left {
-    width: 50%;
+.content .game .game-header{
+    display: inline-flex;
+    width: 96%;
+    text-align: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: -10%;
+    margin-top: 10%;
+
+}
+.content .game .game-header .name-game{
+    width: 100%;
     float: left;
 }
+.content .game .game-header .name-game p{
+    font-size: 35px;
+    text-decoration: underline;
+    font-family: cursive;
+    color: chartreuse;
+    text-transform: capitalize;
+}
 
-#main .content .colum-2 .colum-right {
-    width: 50%;
+.content .game .game-header .name-game p:hover{
+    font-size: 45px;
+}
+.content .game .game-header .icon-cancel{
+    width: 10%;
     float: right;
 }
 
-#main .content img {
-    width: 100px;
-    padding: 2px 2px;
-    border-radius: 100px;
-    border: solid 3px #00C6E1;
+.content .game .game-header .icon-cancel img{
+    width: 85%;
+    padding-top: -48%;
+    margin-top: -115%;
+    margin-right: -115%;
+    background-color: #52c575;
+    border-radius: 50px;
+}
+.content .game .game-header .icon-cancel img:hover{
+    width: 95%;
+    background-color: #fd7a41;
+    border-radius: 50px;
 }
 
-.content .pagination {
+
+.content .game .game-conten{
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
     display: flex;
+    margin-top: 6%;
 }
 
-.content .pagination .prev {
-    float: right;
-    margin-left: 89%;
-    font-size: 60px;
-    border: solid 2px;
-    width: 62px;
-    text-align: center;
-    border-radius: 25px;
-    padding-bottom: 9px;
-    padding-left: 16px;
-    padding-right: 22px;
+.content .game .game-conten img{
+    width: 68%;
+    border-radius: 10px;
+    max-height: 260px;
+    margin-left: 35%;
+    margin-bottom: 22%;
+}
+.content .game .game-conten p{
+    margin-left: 2%;
+    display: -webkit-box;
+    max-width: 100%;
+    font-size: 18px;
+    max-height: 281px;
+    line-height: 1;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.content .pagination .next {
-    float: left;
-    font-size: 60px;
-    border: solid 2px;
-    width: 62px;
+.content .game .game-function{
+    margin-top: 4%;
     text-align: center;
-    border-radius: 25px;
-    padding-bottom: 9px;
-    padding-left: 16px;
-    padding-right: 26px;
+    margin-bottom: 4%;
+}
+.content .game .game-function button{
+    height: 52px;
+    width: 128px;
+    font-size: 23px;
+    border-radius: 15px;
+}
+.content .game .game-function button:hover{
+    background-color: #69C48F;
+    font-size: 21px;
 }
 
 #video-play {
