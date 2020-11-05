@@ -1,3 +1,6 @@
 li {
     list-style-type: none;
 }
+span {
+    outline-style: none;
+}

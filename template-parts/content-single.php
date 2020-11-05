@@ -1,5 +1,5 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<div class="blog-post-wrap full-width" >
 
 		<div class="entry-title">
@@ -9,8 +9,8 @@
 				</li>
 			</div>
 			<div class="game-action">
-				<button class="btn-game-action btn-add-favorite"> <i class="far fa-star"></i>Add to favorite</button>
-				<button class="btn-game-action btn-full-screen" onclick="openFullscreen();"><i class="fas fa-expand-arrows-alt"></i>Full Screen</button>
+				<button class="btn-game-action btn-add-favorite"><i class="fa far fa-star"></i><span>Add favorite</span></button>
+				<button class="btn-game-action btn-full-screen" onclick="openFullscreen();"><i class="fa fas fa-expand"></i><span>Full Screen</span></button>
 			</div>
 		</div>
 
@@ -24,9 +24,7 @@
 
 	</div><!-- .blog-post-wrap -->
 
-	<div class="">
 
-	</div>
 </article><!-- #post-## -->
 
 <!-- Code for full screen. -->

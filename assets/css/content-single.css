@@ -1,25 +1,22 @@
 /* Use variable in css */
 :root {
-    --single-content-height: 500px;
+    --id-iframe-height: 500px;
 }
 
 /* Content-single is all of sidebar and article*/
 #content-single {
     position: relative;
-    height: var(--single-content-height);
+    height: var(--id-iframe-height);
     margin: 200px 100px 30px 100px;
     display: flex;
+    height: 700px;
 }
 #content-single article {
     position: relative;
     width: 70%;
     margin-right: 30px;
 }
-#content-single .sidebar {
-    height: var(--single-content-height);
-    width: 30%;
-    background-color: red;
-}
+
 
 
 article .full-width {
@@ -28,9 +25,10 @@ article .full-width {
     display: flex;
     flex-direction: column;
 }
+
 /* Code for title */
 article .full-width .entry-title {
-    height: 15%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -41,25 +39,45 @@ article .full-width .entry-title {
     line-height: 25px;
     padding: 10px 0;
 }
+/* Code for button game action */
 .entry-title .game-action {
     display: flex;
     margin-bottom: 10px;
 
-}
-.entry-title .game-action .btn-game-action {
-    max-height: 100%;
-    width: auto;
 
 }
+.entry-title .game-action .btn-game-action {
+    width: 160px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+   
+}
+
+/* Start Css for content button  */
+.entry-title .game-action .btn-game-action i {
+font-size: 30px;
+margin-right: 5px;
+border-radius: 50px;
+}
+/* End css for content button*/
+
 
 .entry-title .game-action .btn-add-favorite {
     margin-right:  20px;
+    background-color: #16c04f;
 }
 
 
 .entry-title .game-action .btn-full-screen {
-    
+    background-color: #e0680e;
 }
+
+/* End css for fontawesome */
+/* End css for button game action */
+/* End code for title */
 
 /* Code for iframe */
 article .full-width .frame {
@@ -74,4 +92,5 @@ article .full-width .frame {
     width: 100%;
 }
 
+/* End code for iframe */
 
