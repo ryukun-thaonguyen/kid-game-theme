@@ -6852,44 +6852,36 @@ body.error404 .footer-divider {
     animation-fill-mode: forwards;
 }
 
-/** animation starts */
-@keyframes example {
-    from {right:-200px; bottom:-100px ;opacity:0.1;}
-    to {right: 0px; top: 0px; opacity:1;}
-  }
-
 .content .game .game-header{
     width: 110%;
-    /* text-align: center;
-    align-items: center; */
-    /* padding-left: 2%;
+    text-align: center;
+    align-items: center;
+    padding-left: 2%;
     padding-right: 2%;
     margin-bottom: -10%;
-    margin-top: 10%; */
-    margin: auto auto;
+    margin-top: 10%;
 
 }
 .content .game .game-header .name-game{
+    margin-top: 18%;
     width: 100%;
+    margin-bottom: 77px;
 }
 .content .game .game-header .name-game p{
     font-size: 35px;
     text-decoration: underline;
     font-family: cursive;
-    color: chartreuse;
+    color:#f74545;
     text-transform: capitalize;
 }
 
 .content .game .game-header .name-game p:hover{
     font-size: 45px;
 }
-
-.content .game .game-header .icon-cancel img:hover{
-    width: 95%;
-    background-color: #fd7a41;
-    border-radius: 50px;
+.content .game .game-header .icon-cancel{
+    width: 10%;
+    float: right;
 }
-
 
 .content .game .game-conten{
     width: 98%;
@@ -6899,41 +6891,49 @@ body.error404 .footer-divider {
     margin-top: 6%;
 }
 
-.content .game .game-conten img{
-    width: 68%;
+.content .game .game-conten img {
+    width: 100%;
     border-radius: 10px;
     max-height: 260px;
-    margin-left: 35%;
-    margin-bottom: 22%;
+    margin-left: 32%;
+    margin-bottom: 59%;
 }
+
 .content .game .game-conten p{
-    margin-left: 2%;
+    margin-left: 6%;
     display: -webkit-box;
-    max-width: 100%;
+    max-width: 53%;
     font-size: 18px;
     max-height: 281px;
     line-height: 1;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .content .game .game-function{
-    margin-top: 4%;
+    margin-top: 2%;
     text-align: center;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
 }
 .content .game .game-function button{
-    height: 52px;
-    width: 128px;
-    font-size: 23px;
+    height: 77px;
+    width: 223px;
+    font-size: 30px;
     border-radius: 15px;
+    font-family: cursive;
 }
 .content .game .game-function button:hover{
-    background-color: #69C48F;
-    font-size: 21px;
+    background-color: #53c73a;
+    font-size: 25px;
 }
+
+/** animation starts */
+@keyframes example {
+    from {right:-200px ;opacity:0.1;}
+    to {right: 0px; opacity:1;}
+  }
 
 #video-play {
     width: 100%;
@@ -6954,3 +6954,4 @@ body.error404 .footer-divider {
     left: 300px;
     z-index: 1000000;
 }
+

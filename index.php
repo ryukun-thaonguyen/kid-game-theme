@@ -17,14 +17,14 @@
                 </div>
                 <div class= "game">
                 <?php 
-                        $the_query = new WP_Query('p=5');
+                        $the_query = new WP_Query('p=6');
                         if ( $the_query->have_posts() ) {
                                 while ( $the_query->have_posts() ) {
                                         $the_query->the_post();
                                         get_template_part('template-parts/content');
                                 }   
                         } else {
-                                echo 'không có post nào theo yêu cầu ông ạ';
+                                get_template_part('template-parts/content-none');
                         }
                         wp_reset_postdata();
                         ?> 
