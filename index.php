@@ -3,33 +3,31 @@
 <div id= "main"> 
          
         <div id="video" class="hidden-sm hidden-xs en">
-         <div id="main-left">
-                 <a name="" onclick="playvideo()" id="btn" class="btn btn-primary" href="#" role="button"></a>
-         </div>
-        <video width="1920" id="video-play" muted="muted" autoplay="true" height="1080"  >
+                <div id="main-left">
+                        <a name="" onclick="playvideo()" id="btn" class="btn btn-primary" href="#" role="button"></a>
+                </div>
+                <video width="1920" id="video-play" muted="muted" autoplay="true" height="1080"  >
                         <source src="<?php echo get_template_directory_uri() ?>/assets/uploads/doodle-bg-8-blank.mpeg" type="video/mp4">
                         <source src="<?php echo get_template_directory_uri() ?>/assets/uploads/doodle-bg-8-blank.mpeg" type="video/mpeg">
-        </video> 
+                </video> 
         </div>
-        <div class= "content">
-                <div class = "achievements">
-                        <P>hello </P>
-                </div>
-                <div class= "game">
-                <?php 
-                        $the_query = new WP_Query('p=6');
-                        if ( $the_query->have_posts() ) {
-                                while ( $the_query->have_posts() ) {
-                                        $the_query->the_post();
-                                        get_template_part('template-parts/content');
-                                }   
-                        } else {
-                                get_template_part('template-parts/content-none');
-                        }
-                        wp_reset_postdata();
-                        ?> 
-                </div>
-        </div>          
+        <div class = "achievements">
+                <P>hello </P>
+        </div>
+        <div class= "game">
+        <?php 
+                $the_query = new WP_Query('p=6');
+                if ( $the_query->have_posts() ) {
+                        while ( $the_query->have_posts() ) {
+                                $the_query->the_post();
+                                get_template_part('template-parts/content');
+                        }   
+                } else {
+                        get_template_part('template-parts/content-none');
+                }
+                wp_reset_postdata();
+                ?> 
+        </div>         
 </div>
 
 
