@@ -1,9 +1,12 @@
 /* Use variable in css */
+
 :root {
-    --id-iframe-height: 500px;
+    --id-iframe-height: 550px;
 }
 
+
 /* Content-single is all of sidebar and article*/
+
 #content-single {
     position: relative;
     height: var(--id-iframe-height);
@@ -11,13 +14,12 @@
     display: flex;
     height: 700px;
 }
+
 #content-single article {
     position: relative;
     width: 70%;
     margin-right: 30px;
 }
-
-
 
 article .full-width {
     height: 100%;
@@ -26,12 +28,15 @@ article .full-width {
     flex-direction: column;
 }
 
+
 /* Code for title */
+
 article .full-width .entry-title {
     height: 50px;
     display: flex;
     justify-content: space-between;
 }
+
 .entry-title .game-title {
     color: black;
     font-weight: 700;
@@ -39,13 +44,15 @@ article .full-width .entry-title {
     line-height: 25px;
     padding: 10px 0;
 }
+
+
 /* Code for button game action */
+
 .entry-title .game-action {
     display: flex;
     margin-bottom: 10px;
-
-
 }
+
 .entry-title .game-action .btn-game-action {
     width: 160px;
     border-radius: 40px;
@@ -53,33 +60,41 @@ article .full-width .entry-title {
     color: white;
     position: relative;
     display: inline-block;
-   
 }
+
 
 /* Start Css for content button  */
+
 .entry-title .game-action .btn-game-action i {
-font-size: 30px;
-margin-right: 5px;
-border-radius: 50px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-radius: 50px;
 }
+
+
 /* End css for content button*/
 
-
 .entry-title .game-action .btn-add-favorite {
-    margin-right:  20px;
+    margin-right: 20px;
     background-color: #16c04f;
 }
-
 
 .entry-title .game-action .btn-full-screen {
     background-color: #e0680e;
 }
 
+
 /* End css for fontawesome */
+
+
 /* End css for button game action */
+
+
 /* End code for title */
 
+
 /* Code for iframe */
+
 article .full-width .frame {
     position: relative;
     height: 85%;
@@ -87,10 +102,94 @@ article .full-width .frame {
 }
 
 .full-width .frame #id-iframe {
-    position: absolute;
-    height: 550px;
+    height: var(--id-iframe-height);
     width: 100%;
 }
 
+
 /* End code for iframe */
 
+
+/* -------------- Code for next level--------------------- */
+
+
+/* The Modal (background) */
+
+#btn-modal--open {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Start css for class modalNextGame */
+.entryModal .modalModifier .modalNextGame {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 700px;
+    transform: translate(-50%,-50%);
+    
+
+}
+
+#modalNextGame .modal__content {
+    background-color:#222429;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    height: auto;
+}
+
+#modalNextGame .modal__content .btn-close {
+    float: right;
+    font-weight: bolder;
+    margin: 10px 20px;
+    padding: 5px 10px;
+    border-radius: 30px;
+
+}
+
+#modalNextGame .modal__content .btn-close:hover,
+#modalNextGame .modal__content .btn-close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+ 
+
+}
+
+
+#modalNextGame .modal__content .modal__title {
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 40px;
+}
+#modalNextGame .modal__content .modal__action {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 20px 30px 20px;
+
+}
+#modalNextGame .modal__content .modal__action .btn {
+    height: auto;
+}
+#modalNextGame .modal__content .modal__action .btn
+/* End css for class modalNextGame */
+
+
+/* ------------End code for next level -------------------------- */

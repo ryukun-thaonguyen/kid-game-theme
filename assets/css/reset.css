@@ -1,6 +1,12 @@
 li {
     list-style-type: none;
 }
+
 span {
     outline-style: none;
+}
+
+button {
+    text-decoration: none;
+    cursor: pointer;
 }

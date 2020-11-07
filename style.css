@@ -5,8 +5,6 @@ Description: just a theme
 */
 
 
-
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -271,14 +269,12 @@ h6 {
     font-size: 24px;
 }
 
-
 dfn,
 cite,
 em,
 i {
     font-style: italic;
 }
-
 
 pre {
     background: #eee;
@@ -612,14 +608,15 @@ a:focus {
     margin-right: 1%;
 }
 
-#main .achievements{
+#main .achievements {
     position: absolute;
     width: 22%;
     height: 400px;
     background-color: red;
     float: left;
 }
-#main .game{
+
+#main .game {
     float: right;
     margin-right: 37%;
     background-repeat: round;
@@ -638,7 +635,7 @@ a:focus {
     animation-fill-mode: forwards;
 }
 
-.game .game-header{
+.game .game-header {
     width: 110%;
     text-align: center;
     align-items: center;
@@ -646,30 +643,32 @@ a:focus {
     padding-right: 2%;
     margin-bottom: -10%;
     margin-top: 10%;
-
 }
-.game .game-header .name-game{
+
+.game .game-header .name-game {
     margin-top: 18%;
     width: 100%;
     margin-bottom: 77px;
 }
-.game .game-header .name-game p{
+
+.game .game-header .name-game p {
     font-size: 35px;
     text-decoration: underline;
     font-family: cursive;
-    color:#f74545;
+    color: #f74545;
     text-transform: capitalize;
 }
 
-.game .game-header .name-game p:hover{
+.game .game-header .name-game p:hover {
     font-size: 45px;
 }
-.game .game-header .icon-cancel{
+
+.game .game-header .icon-cancel {
     width: 10%;
     float: right;
 }
 
-.game .game-conten{
+.game .game-conten {
     width: 98%;
     padding-left: 1%;
     padding-right: 1%;
@@ -685,7 +684,7 @@ a:focus {
     margin-bottom: 59%;
 }
 
-.game .game-conten p{
+.game .game-conten p {
     margin-left: 6%;
     display: -webkit-box;
     max-width: 53%;
@@ -698,28 +697,38 @@ a:focus {
     text-overflow: ellipsis;
 }
 
-.game .game-function{
+.game .game-function {
     margin-top: 2%;
     text-align: center;
     margin-bottom: 5%;
 }
-.game .game-function button{
+
+.game .game-function button {
     height: 77px;
     width: 223px;
     font-size: 30px;
     border-radius: 15px;
     font-family: cursive;
 }
-.game .game-function button:hover{
+
+.game .game-function button:hover {
     background-color: #53c73a;
     font-size: 25px;
 }
 
+
 /** animation starts */
+
 @keyframes example {
-    from {right:-250px ;opacity:0.1;}
-    to {right: 0px; opacity:1;}
-  }
+    from {
+        right: -250px;
+        opacity: 0.1;
+    }
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
 
 #video-play {
     margin-top: -10%;
@@ -742,8 +751,6 @@ a:focus {
     z-index: 1000000;
 }
 
-
-
 @media screen and (min-width: 37.5em) {
     .menu-toggle {
         display: none;
@@ -751,8 +758,6 @@ a:focus {
     .main-navigation ul {
         display: block;
     }
-    
-
 }
 
 .site-main .comment-navigation,
@@ -3173,7 +3178,7 @@ ul.tabs .fa {
 }
 
 #recent-classes-slider .slider-item:hover .btn,
-.course-item:hover .btn {
+.course-item:hover  {
     opacity: 1;
 }
 
@@ -6334,8 +6339,6 @@ body.error404 .footer-divider {
         padding-left: 25px;
         text-align: left;
     }
-    
-
 }
 
 @media screen and (min-width: 992px) {
@@ -6795,7 +6798,7 @@ body.error404 .footer-divider {
     .search-wrapper .search {
         padding: 40px 0 25px;
     }
-    #main .game{
+    #main .game {
         float: right;
         margin-right: 37%;
         background-repeat: round;
@@ -6813,7 +6816,6 @@ body.error404 .footer-divider {
         animation-duration: 4s;
         animation-fill-mode: forwards;
     }
-    
 }
 
 @media screen and (max-width: 600px) {
@@ -6830,7 +6832,7 @@ body.error404 .footer-divider {
     .portfolio-item {
         width: 50% !important;
     }
-    #main .game{
+    #main .game {
         float: right;
         margin-right: 37%;
         background-repeat: round;
@@ -6983,6 +6985,6 @@ body.error404 .footer-divider {
         background-attachment: fixed;
     }
 }
+
+
 /*************************/
-
-
