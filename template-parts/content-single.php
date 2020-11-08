@@ -39,7 +39,7 @@
 
 					<div class="modal__action">
 						<button class="btn btn-back">Quay lai</button>
-						<button class="btn btn-next">Tiep tuc</button>
+						<button onclick="finishGame()" class="btn btn-next">Tiep tuc</button>
 					</div>
 				</div>
 			</div>

@@ -3,22 +3,26 @@
 fetch('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/')
     .then(response => response.json())
     .then(data => {
-        if (!localStorage.getItem('game')) {
-            localStorage.setItem('game', JSON.stringify(data));
+        var game= getGame();
+        if (!game) {
+            setGame(data);
+        }else{
+                document.getElementById('iframe_game').src="http://localhost/press/kid/page/?id="+game.id;
+                document.getElementById('link-game').href="http://localhost/press/kid/page/?p="+game.id;
         }
     });
-
-
 const video = document.getElementById('video-play');
 console.log('loaded script');
-const timeControl = [0, 3, 7, 11, 15, 19, 23, 27];
+const timeControl = [0, 3, 7, 11, 15, 19, 23, 27, 31];
 
-
+if(video){
 video.addEventListener('loadedmetadata', (e) => {
     var game = getGame();
-    video.currentTime = timeControl[game.currentGame];
+    video.currentTime = timeControl[game.currentGame-1];
     video.play();
-
+    // if(game.currentGame==8){
+    //     document.getElementById('level').style.display='block';
+    // }
 });
 
 video.addEventListener('playing', (e) => {
@@ -26,34 +30,56 @@ video.addEventListener('playing', (e) => {
         var game = getGame();
         console.log('g ' + game.currentGame)
         if (video.currentTime >= timeControl[game.currentGame]) {
+            if(game.currentGame==8){
+                document.getElementById('level').style.display='block';
+            }
             console.log('paused');
             video.currentTime = timeControl[game.currentGame] - 0.6;
+            
         }
     }, 900)
 });
+}
 
+function nextLevel(){
+    var game = getGame();
+    postData('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/', 
+    { 
+        'currentGame': game.currentGame, 
+        'isFinished': !game.isFinished,
+        'id': game.id,
+        'level':game.level
+    }).then(data=>{
+        setGame(data);
+        window.location.reload();
+    })
+}
+function finishGame(){
+    var game = getGame();
+    postData('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/', 
+    { 
+        'currentGame': game.currentGame, 
+        'isFinished': !game.isFinished,
+        'id': game.id,
+        'level':game.level
+    }).then(data=>{
+        setGame(data);
+        window.location.assign('http://localhost/press/kid/');
+    })
+}
 function playvideo() {
     var game = getGame();
-    postData('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/', { 'currentGame': game.currentGame, 'isFinished': !game.isFinished })
+    postData('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/', 
+    { 
+        'currentGame': game.currentGame, 
+        'isFinished': !game.isFinished,
+        'id': game.id,
+        'level':game.level
+    })
         .then(data => {
             console.log(data);
             setGame(data);
         })
-}
-
-function nextGame(data) {
-    var loop = setInterval(() => {
-        var game = getGame();
-        console.log(video.currentTime);
-        if (data.currentGame == game.currentGame) {
-            video.currentTime = timeControl[game.currentGame] - 0.75;
-        } else {
-            if (Math.round(video.currentTime) == timeControl[data.currentGame]) {
-                setGame(data);
-                console.log('paused');
-            }
-        }
-    }, 900)
 }
 
 Object.defineProperty(HTMLMediaElement.prototype, 'isPlaying', {
@@ -79,6 +105,10 @@ async function postData(url = '', data = {}) {
 
 function setGame(data) {
     localStorage.setItem('game', JSON.stringify(data));
+    if(data.id&&document.getElementById('iframe_game')){
+    document.getElementById('iframe_game').src="http://localhost/press/kid/page/?id="+data.id;
+    document.getElementById('link-game').href="http://localhost/press/kid/page/?p="+data.id;
+    }
 }
 
 function getGame() {
