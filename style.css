@@ -1,5 +1,5 @@
 /*
-Theme Name: moi nhat luoon
+Theme Name: moi nhat luoon  luoon 
 Author: Team 11
 Description: just a theme
 */
@@ -608,7 +608,7 @@ a:focus {
     margin-right: 1%;
 }
 
-#main .achievements {
+#main .achievements{
     position: absolute;
     width: 22%;
     height: 400px;
@@ -616,120 +616,54 @@ a:focus {
     float: left;
 }
 
-#main .game {
+#main .game{
     float: right;
     margin-right: 37%;
-    background-repeat: round;
-    background-attachment: inherit;
-    background-size: cover;
-    display: inline-flex;
-    background-image: url(assets/uploads/clouds.gif);
     margin-left: 1%;
     width: 37%;
+    height: auto;
     margin-top: -2%;
-    border: 1px;
-    background-size: 100% auto;
     position: absolute;
     animation-name: example;
     animation-duration: 4s;
     animation-fill-mode: forwards;
 }
 
-.game .game-header {
-    width: 110%;
-    text-align: center;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-bottom: -10%;
-    margin-top: 10%;
-}
-
-.game .game-header .name-game {
-    margin-top: 18%;
-    width: 100%;
-    margin-bottom: 77px;
-}
-
-.game .game-header .name-game p {
-    font-size: 35px;
-    text-decoration: underline;
-    font-family: cursive;
-    color: #f74545;
-    text-transform: capitalize;
-}
-
-.game .game-header .name-game p:hover {
-    font-size: 45px;
-}
-
-.game .game-header .icon-cancel {
-    width: 10%;
-    float: right;
-}
-
-.game .game-conten {
-    width: 98%;
-    padding-left: 1%;
-    padding-right: 1%;
-    display: flex;
-    margin-top: 6%;
-}
-
-.game .game-conten img {
-    width: 100%;
-    border-radius: 10px;
-    max-height: 260px;
-    margin-left: 32%;
-    margin-bottom: 59%;
-}
-
-.game .game-conten p {
-    margin-left: 6%;
-    display: -webkit-box;
-    max-width: 53%;
-    font-size: 18px;
-    max-height: 281px;
-    line-height: 1;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.game .game-function {
-    margin-top: 2%;
+.game-function{
+    margin-top: -25%;
     text-align: center;
     margin-bottom: 5%;
 }
-
-.game .game-function button {
+.game-function button{
     height: 77px;
     width: 223px;
     font-size: 30px;
     border-radius: 15px;
     font-family: cursive;
 }
-
-.game .game-function button:hover {
+.game-function button:hover{
     background-color: #53c73a;
     font-size: 25px;
 }
-
-
 /** animation starts */
-
 @keyframes example {
-    from {
-        right: -250px;
-        opacity: 0.1;
-    }
-    to {
-        right: 0px;
-        opacity: 1;
-    }
+    from {right:-250px ;opacity:0.1;}
+    to {right: 0px; opacity:1;}
 }
 
+.game iframe {
+    width: 100%;
+    min-height: 505px;
+    background-repeat: round;
+    background-attachment: inherit;
+    background-size: cover;
+    display: inline-flex;
+    background-image: url(assets/uploads/clouds.gif);
+    background-size: 100% auto;
+    border: none;
+    overflow: hidden;
+}
+  
 #video-play {
     margin-top: -10%;
     width: 100%;
@@ -6528,6 +6462,25 @@ body.error404 .footer-divider {
     .search-wrapper input[type="submit"] {
         float: none;
         margin-top: 10px;
+    }
+}
+@media screen and (max-width: 1040px) {
+    .game iframe {
+        width: 100%;
+        min-height: 505px;
+        background-repeat: round;
+        background-attachment: inherit;
+        background-size: cover;
+        display: inline-flex;
+        background-image: url(assets/uploads/clouds.gif);
+        background-size: 100% 505px;
+        border: none;
+        overflow: hidden;
+    }
+    .game-function{
+        margin-top: -35%;
+        text-align: center;
+        margin-bottom: 5%;
     }
 }
 

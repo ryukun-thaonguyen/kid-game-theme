@@ -14,19 +14,14 @@
         <div class = "achievements">
                 <P>hello </P>
         </div>
-        <div class= "game">
-        <?php 
-                $the_query = new WP_Query('p=7');
-                if ( $the_query->have_posts() ) {
-                        while ( $the_query->have_posts() ) {
-                                $the_query->the_post();
-                                get_template_part('template-parts/content');
-                        }   
-                } else {
-                        get_template_part('template-parts/content-none');
-                }
-                wp_reset_postdata();
-                ?> 
+        <div class="game">
+                <iframe src="http://localhost/manh/theme/title/?id=5" scrolling="no" id="iframe_game">
+                </iframe>
+                <div class= "game-function">
+                        <a href="#" > 
+                                <button> Les't Go </button>
+                        </a>
+                </div>  
         </div>         
 </div>
 
