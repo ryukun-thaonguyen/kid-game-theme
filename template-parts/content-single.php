@@ -21,29 +21,32 @@
 				the_content();
 			?>
 
-			<div class="entryModal">
-				<div class="modalModifier">
-					<button class="btn btn-modal" id="btn-modal--open">Nhấn để mở modal</button>
-
-					<div id="modalNextGame" class="modalNextGame">
-						<div class="modal__content">
-							<button class="btn btn-close"><i class="fa far fa-times-circle"></i></button>
-							<h5 class="modal__title">Bạn đã thắng</h5>
-
-							<div class="modal__action">
-								<button class="btn btn-back">Quay lai</button>
-								<button class="btn btn-next">Tiep tuc</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
+			
 		</div><!-- .entry-content -->
 
 	</div><!-- .blog-post-wrap -->
-	
 </article><!-- #post-## -->
+
+<article class="article__modal">
+	<div class="entryModal">
+		<div class="modalModifier">
+			<button class="btn btn-modal" id="btn-modal--open">Nhấn để mở modal</button>
+
+			<div id="modalNextGame" class="modalNextGame">
+				<div class="modal__content">
+					<button class="btn btn-close"><i class="fa far fa-times-circle"></i></button>
+					<h5 class="modal__title">Bạn đã thắng</h5>
+
+					<div class="modal__action">
+						<button class="btn btn-back">Quay lai</button>
+						<button class="btn btn-next">Tiep tuc</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</article>
 
 <!-- Code for full screen. -->
 <script>
@@ -65,10 +68,12 @@
 	var modal = document.getElementById("modalNextGame");
 	var btn_modalOpen = document.getElementById("btn-modal--open");
 	var btn_modalClose = document.getElementsByClassName("btn-close")[0];
+	var article_contentSingle= document.getElementsByClassName("article-content-single")[0];
 
 	// When the user clicks the button, open the modal 
 	btn_modalOpen.onclick = function() {
 		modal.style.display = "block";
+		
 	}
 
 	// When the user clicks on <span> (x), close the modal

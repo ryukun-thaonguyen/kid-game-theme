@@ -15,7 +15,7 @@
                 <P>hello </P>
         </div>
         <div class="game">
-                <iframe src="http://localhost/manh/theme/title/?id=5" scrolling="no" id="iframe_game">
+                <iframe src="http://localhost/Wordpress/wordpress/hello/?id=7" scrolling="no" id="iframe_game">
                 </iframe>
                 <div class= "game-function">
                         <a href="#" > 

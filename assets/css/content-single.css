@@ -1,4 +1,4 @@
-/* Use variable in css */
+
 
 :root {
     --id-iframe-height: 550px;
@@ -13,15 +13,15 @@
     margin: 200px 100px 30px 100px;
     display: flex;
     height: 700px;
+    width: 100%;
 }
 
-#content-single article {
+#content-single article:first-child {
     position: relative;
     width: 70%;
-    margin-right: 30px;
 }
 
-article .full-width {
+article:first-child .full-width {
     height: 100%;
     width: 100%;
     display: flex;
@@ -31,7 +31,7 @@ article .full-width {
 
 /* Code for title */
 
-article .full-width .entry-title {
+article:first-child .full-width .entry-title {
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -95,7 +95,7 @@ article .full-width .entry-title {
 
 /* Code for iframe */
 
-article .full-width .frame {
+article:first-child .full-width .frame {
     position: relative;
     height: 85%;
     width: 100%;
@@ -110,6 +110,11 @@ article .full-width .frame {
 /* End code for iframe */
 
 
+
+
+.article__modal {
+    position: absolute;
+} 
 /* -------------- Code for next level--------------------- */
 
 
@@ -142,7 +147,7 @@ article .full-width .frame {
 }
 
 #modalNextGame .modal__content {
-    background-color:#222429;
+    background-color:#aaaaaa;
     margin: auto;
     padding: 0;
     width: 80%;
