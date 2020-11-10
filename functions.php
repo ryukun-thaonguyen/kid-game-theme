@@ -146,6 +146,7 @@ function kids_education_scripts() {
     wp_enqueue_style( 'content-single-style', get_template_directory_uri() . '/assets/css/content-single.css', array(), '' );
     wp_enqueue_style( 'reset-content-single-style', get_template_directory_uri() . '/assets/css/reset.css', array(), '' );
 
+    wp_enqueue_style( 'front-page-style', get_template_directory_uri() . '/assets/css/front-page.css', array(), '' );
 
 
     //scripts 
