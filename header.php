@@ -17,27 +17,32 @@
 			<div class="container">
 				<nav id="site-navigation" class="main-navigation left-menu">
                     <ul id="primary-menu" class="menu nav-menu">
-                        <li id="menu-item-128" class="fa-home menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-128"><a href="#" aria-current="page">Home</a></li>
-                        <li id="menu-item-262" class="fa-archive menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="#">Blogs</a></li>
-                        <li id="menu-item-129" class="fa-gamepad menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="#">Games</a></li>
-                        <li id="menu-item-256" class="fa-book menu-item menu-item-type-custom menu-item-object-custom menu-item-256"><a href="#">Courses</a></li>
+                        <li id="menu-item-128" class="fa-home menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-128"><a href="<?php echo get_home_url() ?>" aria-current="page">Home</a></li>
+                        <li id="menu-item-262" class="fa-archive menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="<?php echo get_home_url() ?>/blogs">Blogs</a></li>
+                        <li id="menu-item-129" class="fa-gamepad menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="<?php echo get_home_url() ?>/games">Games</a></li>
+                        <li id="menu-item-256" class="fa-book menu-item menu-item-type-custom menu-item-object-custom menu-item-256"><a href="<?php echo get_home_url() ?>/courses">Courses</a></li>
                     </ul>
                 </nav>
         		<div class="site-branding">
           			<div class="site-logo">
-                        <a href="#"></a><img src="<?php echo get_stylesheet_directory_uri().'/assets/uploads/BEE.png'; ?>" class="custom-logo" alt="Game For Kids"></img>
+                        <a href="<?php echo get_home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/uploads/BEE.png'; ?>" class="custom-logo" alt="Game For Kids"></img></a>
                     </div>
                 <div id="site-header">
-                    <h1 class="site-title"><a href="#" rel="home">Game For Kids</a></h1>
+                    <h1 class="site-title"><a href="<?php echo get_home_url() ?>" rel="home">Game For Kids</a></h1>
                 </div>
         		</div>
 
         		<nav class="main-navigation right-menu">
                     <ul id="menu-header-right-menu" class="menu nav-menu">
-                        <li id="menu-item-258" class="fa-info-circle menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="#">Info</a></li>
-                        <li id="menu-item-259" class="fa-envelope menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="#">Contact</a></li>
-                        <li id="menu-item-260" class="fa-sign-in menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="#">Login</a></li>
-                        <li id="menu-item-257" class="fa-user-plus menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="#">Register</a></li>
+                        <li id="menu-item-258" class="fa-info-circle menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="<?php echo get_home_url() ?>/info">Info</a></li>
+                        <li id="menu-item-259" class="fa-envelope menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
+                        <?php if ( is_user_logged_in() ) { ?>
+                            <li id="menu-item-260" class="fa-user menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="#"><?php global $current_user; wp_get_current_user(); echo $current_user->user_login;?></a></li>
+                            <li id="menu-item-261" class="fa-sign-out menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+                        <?php } else { ?>
+                            <li id="menu-item-262" class="fa-sign-in menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="<?php echo get_home_url() ?>/login">Login</a></li>
+                            <li id="menu-item-253" class="fa-user-plus menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="<?php echo get_home_url() ?>/register">Register</a></li>
+                        <?php } ?>
                     </ul>
                 </nav>
 			</div>

@@ -1,5 +1,5 @@
 /*
-Theme Name: moi nhat luoon  luoon 
+Theme Name: 11
 Author: Team 11
 Description: just a theme
 */
@@ -610,9 +610,8 @@ a:focus {
 
 #main .achievements{
     position: absolute;
-    width: 22%;
-    height: 400px;
-    background-color: red;
+    width: 25%;
+    height: 1000px;
     float: left;
 }
 
@@ -7028,3 +7027,103 @@ body.error404 .footer-divider {
 
 
 /*************************/
+
+/*************************/
+
+/**sidebar===========*/
+
+.achievements {
+    width: 35%;
+    overflow: auto;
+    
+    
+    overflow: hidden;
+  }
+  
+  ._3Gj5_ {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 16px;
+    width: 100%;
+    display: block;
+    margin: 0px 0px 24px;
+    padding: 24px;
+  }
+  
+  ._2O43A {
+    display: block;
+    width: 100%;
+    margin: 0px 0px 24px;
+  }
+  
+  ._3ZuGY {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 16px;
+    margin: 0px 0px 24px;
+    width: 100%;
+    padding: 24px;
+  }
+  
+  .content .achievements {
+    margin-left: 0px;
+  }
+  
+  li._2Inq2 {
+    list-style-type: none;
+  }
+  
+  ._2Inq2 {
+    align-items: center;
+    display: flex;
+    padding: 12px 24px;
+  }
+  
+  ._3lKd4 {
+    border-bottom: 2px solid #dadada;
+    margin: 0 -24px 24px;
+    position: relative;
+  }
+  
+  ._2Jb7i {
+    width: 100%;
+  }
+  
+  ._3iVqs {
+    background: none;
+    color: #afafaf;
+  }
+  
+  ._1figt,
+  ._1figt:after {
+    border-width: 2px 2px 4px;
+  }
+  
+  ._1figt {
+    border-color: transparent;
+    padding: 12px 16px;
+  }
+  
+  ._25Cnc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  ._3dtSu {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .-AHpg {
+    align-items: baseline;
+    border-bottom: 2px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -24px;
+    padding: 0 24px 12px;
+  }
+  
+  
+  

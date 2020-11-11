@@ -222,4 +222,90 @@ if( !function_exists('kids_game_pagination')){
     }
 }
 
+
+
+/* Tự động chuyển đến một trang khác sau khi login */
+function my_login_redirect( $redirect_to, $request, $user ) {
+    //is there a user to check?
+    global $user;
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+            //check for admins
+            if ( in_array( 'administrator', $user->roles ) ) {
+                    // redirect them to the default place
+                    return admin_url();
+            } else {
+                    return home_url();
+            }
+    } else {
+            return $redirect_to;
+    }
+}
+
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
+function redirect_login_page() {
+$login_page  = home_url( '/login-page/' );
+$page_viewed = basename($_SERVER['REQUEST_URI']);  
+
+if( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+    wp_redirect($login_page);
+    exit;
+}
+}
+add_action('init','redirect_login_page');
+/* Kiểm tra lỗi đăng nhập */
+function login_failed() {
+$login_page  = home_url( '/login-page/' );
+wp_redirect( $login_page . '?login=failed' );
+exit;
+}
+add_action( 'wp_login_failed', 'login_failed' );  
+
+function verify_username_password( $user, $username, $password ) {
+$login_page  = home_url( '/login-page/' );
+if( $username == "" || $password == "" ) {
+    wp_redirect( $login_page . "?login=empty" );
+    exit;
+}
+}
+add_filter( 'authenticate', 'verify_username_password', 1, 3);
+
+function redirect_register_page() {
+$login_page  = home_url( '/register-page/' );
+$page_viewed = basename($_SERVER['REQUEST_URI']);  
+
+if( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+    wp_redirect($login_page);
+    exit;
+}
+}
+
+/* Just display admin bar if user login as adminitrator  */
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+show_admin_bar(false);
+}
+}
+
+function wpcf_is_404( $url = null ){
+    $code = '';
+    if( is_null( $url ) ){
+        return false;
+    }else{
+        $handle = curl_init($url);
+        curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
+        curl_exec($handle);
+        $code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+        if( $code == '404' ){
+            return wp_redirect("404-page");
+        }else{
+            return false;
+        }
+        curl_close($handle);
+    }
+}
+
+
 ?>

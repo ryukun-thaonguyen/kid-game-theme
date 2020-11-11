@@ -1,5 +1,6 @@
 // fetch api to get current game
 
+var levelCompleted;
 fetch('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/')
     .then(response => response.json())
     .then(data => {
@@ -7,8 +8,10 @@ fetch('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/')
         if (!game) {
             setGame(data);
         }else{
-                document.getElementById('iframe_game').src="http://localhost/press/kid/page/?id="+game.id;
-                document.getElementById('link-game').href="http://localhost/press/kid/page/?p="+game.id;
+                document.getElementById('iframe_game').src="http://localhost/wp/wordpress/page/?id="+game.id;
+                document.getElementById('current_game').innerHTML= game.level;
+                document.getElementById('link-game').href="http://localhost/wp/wordpress/page/?p="+game.id;
+                levelCompleted = game.level;
         }
     });
 const video = document.getElementById('video-play');
@@ -64,7 +67,7 @@ function finishGame(){
         'level':game.level
     }).then(data=>{
         setGame(data);
-        window.location.assign('http://localhost/press/kid/');
+        window.location.assign('http://localhost/wp/wordpress/');
     })
 }
 function playvideo() {
@@ -106,11 +109,33 @@ async function postData(url = '', data = {}) {
 function setGame(data) {
     localStorage.setItem('game', JSON.stringify(data));
     if(data.id&&document.getElementById('iframe_game')){
-    document.getElementById('iframe_game').src="http://localhost/press/kid/page/?id="+data.id;
-    document.getElementById('link-game').href="http://localhost/press/kid/page/?p="+data.id;
+        document.getElementById('iframe_game').src="http://localhost/wp/wordpress/page/?id="+data.id;
+        document.getElementById('link-game').href="http://localhost/wp/wordpress/page/?p="+data.id;
     }
+
+    
 }
 
 function getGame() {
     return JSON.parse(localStorage.getItem('game'));
 }
+
+var timerVar = setInterval(countTimer, 1000);
+var totalSeconds = 6696;
+function countTimer() {
+           ++totalSeconds;
+           var hour = Math.floor(totalSeconds /3600);
+           var minute = Math.floor((totalSeconds - hour*3600)/60);
+           var seconds = totalSeconds - (hour*3600 + minute*60);
+           if(hour < 10)
+             hour = "0"+hour;
+           if(minute < 10)
+             minute = "0"+minute;
+           if(seconds < 10)
+             seconds = "0"+seconds;
+           document.getElementById("counttimer").innerHTML = hour + ":" + minute + ":" + seconds;
+        }
+
+        countTimer();
+
+ 
