@@ -308,4 +308,16 @@ function wpcf_is_404( $url = null ){
 }
 
 
+/** codfe.com - thiết lập hình ảnh làm thumbnail mặt định**/
+add_filter( 'post_thumbnail_html', 'wpsites_default_post_image' );
+ 
+function wpsites_default_post_image( $html ) {
+ 
+	if ( empty( $html ) )
+		$html = '<img src="<span style="color: #ed1c24;" data-mce-style="color: #ed1c24;">' . trailingslashit( get_stylesheet_directory_uri() ) . 'images/default-image.png</span>' . '" alt="enter your alt text here" />';
+ 
+	return $html;
+}
+
+
 ?>

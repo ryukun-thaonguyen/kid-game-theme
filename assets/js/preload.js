@@ -1,6 +1,6 @@
 // fetch api to get current game
-
-var levelCompleted;
+// const url=window.location.href;
+// console.log(url);
 fetch('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/')
     .then(response => response.json())
     .then(data => {
@@ -8,12 +8,13 @@ fetch('https://b5bfd1e30120aeb3add84dc2e0f4b29d.m.pipedream.net/')
         if (!game) {
             setGame(data);
         }else{
-                document.getElementById('iframe_game').src="http://localhost/wp/wordpress/page/?id="+game.id;
+                document.getElementById('iframe_game').src="http://localhost/manh/theme/games/page/?id="+game.id;
                 document.getElementById('current_game').innerHTML= game.level;
-                document.getElementById('link-game').href="http://localhost/wp/wordpress/page/?p="+game.id;
+                document.getElementById('link-game').href="http://localhost/manh/theme/games/page/?p="+game.id;
                 levelCompleted = game.level;
         }
     });
+   
 const video = document.getElementById('video-play');
 console.log('loaded script');
 const timeControl = [0, 3, 7, 11, 15, 19, 23, 27, 31];
@@ -31,7 +32,7 @@ video.addEventListener('loadedmetadata', (e) => {
 video.addEventListener('playing', (e) => {
     var loop = setInterval(() => {
         var game = getGame();
-        console.log('g ' + game.currentGame)
+        // console.log('g ' + game.currentGame)
         if (video.currentTime >= timeControl[game.currentGame]) {
             if(game.currentGame==8){
                 document.getElementById('level').style.display='block';
@@ -67,7 +68,7 @@ function finishGame(){
         'level':game.level
     }).then(data=>{
         setGame(data);
-        window.location.assign('http://localhost/wp/wordpress/');
+        window.location.assign('http://localhost/manh/theme/games');
     })
 }
 function playvideo() {
@@ -109,8 +110,8 @@ async function postData(url = '', data = {}) {
 function setGame(data) {
     localStorage.setItem('game', JSON.stringify(data));
     if(data.id&&document.getElementById('iframe_game')){
-        document.getElementById('iframe_game').src="http://localhost/wp/wordpress/page/?id="+data.id;
-        document.getElementById('link-game').href="http://localhost/wp/wordpress/page/?p="+data.id;
+        document.getElementById('iframe_game').src="http://localhost/manh/theme/games/page/?id="+data.id;
+        document.getElementById('link-game').href="http://localhost/manh/theme/games/page/?p="+data.id;
     }
 
     
@@ -135,7 +136,6 @@ function countTimer() {
              seconds = "0"+seconds;
            document.getElementById("counttimer").innerHTML = hour + ":" + minute + ":" + seconds;
         }
-
-        countTimer();
+countTimer();
 
  

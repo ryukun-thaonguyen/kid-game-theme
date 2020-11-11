@@ -29,101 +29,86 @@
                 width: 100%;
                 height: auto;
         }
+        body{
+        background-color: yellow !important;
+        }
 </style>
 
-<div id="main">
+<div class="frontPage">
 
-        <div id="video" class="hidden-sm hidden-xs en">
-                <video width="1920" id="video-play" muted="muted" autoplay="true" height="1080">
-                        <source src="<?php echo get_template_directory_uri() ?>/assets/uploads/doodle-bg-8-blank.mpeg" type="video/mp4">
-                        <source src="<?php echo get_template_directory_uri() ?>/assets/uploads/doodle-bg-8-blank.mpeg" type="video/mpeg">
-                </video>
-                <div id="level">
-                        <img onclick="nextLevel()" src="<?php echo get_template_directory_uri() ?>/assets/uploads/nexticon.png" alt="">
-                        <h2>Level 2</h2>
 
-                </div>
+    <div class="panelGame">
+
+      <div class="panelGame__image">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/panel_game.png" class="panel__background" alt="">
+
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/animation_cloud1.png" class="panel__animation cloud--animation1 " alt="" >
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/animation_cloud2.png" class="panel__animation cloud--animation2" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/animation_cloud3.png" class="panel__animation cloud--animation3" alt="">
+        
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_boys.png" class="panel__animation boys--animation" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star1.png" class="panel__animation star1--animation" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star2.png" class="panel__animation star2--animation " alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star3.png" class="panel__animation star3--animation" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star4.png" class="panel__animation star4--animation" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star4.png" class="panel__animation star5--animation" alt="">
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_star4.png" class="panel__animation star6--animation" alt="">
+
+        <img src="<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_tau.png" class="panel__animation tau--animation" alt="">
+
+
+        <div class="panel_desc">
+          <div>Pick the best game for your kid</div>
+          <p>Make the time to be happier</p>
+          <!-- <form method="POST"> -->
+               
+          <!-- </form> -->
+          <a href="<?php echo get_home_url() ?>/games">
+          <button class="btn__playGame" name="play" >
+                        Play Now
+                </button>
+          </a>
         </div>
-        <div class="achievements">
-                <div class="Yth9H _3ZuGY">
-                        <h2 class="_32T7z"><b class="_3BY7E">Level: <b class="center" style="color: red" id="current_game"></b></b></h2>
-                        <div style="display: flex; justify-content: space-between;">
-                                <div>
-                                        <p>Complete the chart below to reach the next Level</p>
-                                        <div style="width: 100%;  background-color: #ddd;">
-                                                <div style="text-align: right; width: 60%; background-color: green; color: white;">60%</div>
-                                        </div>
-                                        <center>
-                                                6/7
-                                        </center>
-                                </div>
+      </div>
+
+    </div>
 
 
-                        </div>
+    <div class="typesGame">
+        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-animal.png" alt=""></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-character.png" alt=""></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-game.png" alt=""></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-racing.png" alt=""></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-words.png" alt=""></li>
+    </div>
 
-                </div>
+    <div class="newGame">
+      <div class=" card__newGame">
 
-                <div class="_3Gj5_">
-                        <div class="_3JPwy">    
-                                <h2 class="_32T7z"><b class="_3BY7E">Levels completed:</b></h2>
-                                <div style="display: flex;">
-                                <script>
-                                        var i;
-                                        document.getElementById(levelCompleted).innerHTML = i;
-                                        for (i = 0; i =  levelCompleted; i++) {
-                                                </script>
-                                                <div class="numberCircle" ><span id="levelCompleted"></span></div>
-                                                <script>   
-                                        }
-                                </script>
-                                </div>
-                                
-                        </div>
+      </div>
+      <div class=" card__newGame">
 
-                </div>
+      </div>
+      <div class=" card__newGame">
 
+      </div>
+      <div class=" card__newGame">
 
-                <div class="_3Gj5_">
-                        <ul class="_3lKd4 _1pZox _3VQM7">
-                                <?php if (is_user_logged_in()) { ?>
-                                        <li class="_2Inq2"><a class="_3eS0T _2Dy3y" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta("ID"))); ?>"><?php
-                                                                                                                                                                        $user = wp_get_current_user();
+      </div>
+      <div class=" card__newGame">
 
-                                                                                                                                                                        if ($user) :
-                                                                                                                                                                        ?>
-                                                                <img width="40px" height="40px" src="<?php echo esc_url(get_avatar_url($user->ID)); ?>" />
-                                                        <?php endif; ?></a>
-                                                <div class="_1uu30" style="text-transform:capitalize;">
-                                                        <a class="YBCQI fs-exclude" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta("ID"))); ?>"><h1><?php global $current_user;
-                                                                                                                                                                        wp_get_current_user();
-                                                                                                                                                                        echo $current_user->user_login; ?></h1></a></div>
+      </div>
+      
+    </div>
 
-                                        </li>
-                        </ul>
-                        <div>
-                        <h2 class="_32T7z"><b>Rank: <b style="color: red;">19</b></b></h2>
-                        <h2 class="_32T7z">
-                                        <b>Total Hour Played: <b id="counttimer" style="color: red;"></b></b></h2>
-                                        </div>
-                                        <?php } else { ?>
-                                        <hr>
-                                        <center>
-                                        <button class="_2Inq2 btn btn-primary"><a href="<?php echo get_home_url() ?>/login">Login</a></button>
-                                        </center>
-                                        <br>
-                                <?php } ?>
-                </div>
-        </div>
-        <div class="game">
-                <iframe src="" scrolling="no" id="iframe_game">
-                </iframe>
-                <div class="game-function">
-                        <a href="" id="link-game">
-                                <button> Let's Go </button>
-                        </a>
-                </div>
-        </div>
-</div>
+    <div class="shootsGame">
+
+    </div>
+    <div class="racingGame">
+
+    </div>
+  </div>
+
 
 
 <?php get_footer(); ?>
