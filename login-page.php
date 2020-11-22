@@ -5,7 +5,7 @@
 ?>
 
 
-<?php get_header();
+<?php 
 
 if (is_user_logged_in()) {
         $user_id = get_current_user_id();
@@ -14,29 +14,45 @@ if (is_user_logged_in()) {
         $edit_profile_url = get_edit_profile_url($user_id); ?>
         <center>
                 <div class="regted" style="margin-top: 150px;">
-                Bạn đã đăng nhập với tài khoản <a href="<?php echo $profile_url ?>"><b style="color: green"><?php echo $current_user->display_name; ?></b></a>
-                Bạn có muốn <a href="<?php echo esc_url(wp_logout_url($current_url)); ?>"><b style="color: red">Thoát</b></a> không ?
+                You are logged in with your account <a href="<?php echo $profile_url ?>"><b style="color: green"><?php echo $current_user->display_name; ?></b></a>
+                Do you want to <a href="<?php echo esc_url(wp_logout_url($current_url)); ?>"><b style="color: red">Logout</b></a> ?
                 </div>
         </center>
 <?php } else { ?>
         <style>
+        *{
+                padding:6px;
+                margin:0;
+        }
         body {
-                background: #2E8D41;
+                background: url("<?php echo get_template_directory_uri()?>./assets/uploads/homePage_panel_boys.png") no-repeat;
                 font-family: Arial, sans-serif;
+                background-size: cover;
+                align-items: center;
+                justify-content: center;
+                display:flex;
                 
-                line-height: 1.5em;
-                background-color: pink;
+                
         }
 
         .login-area {
-                margin: 100px auto;
-                width: 960px;
-                padding: 1em;
+                background: skyblue;
+                position: relative;
+                margin-top:100px;
+                width: 600px;
+                height: 800px;
+                
+                border-radius:10px;
+                padding: 2em;
                 overflow: hidden;
         }
 
 
-        label {
+        label { 
+                margin-top: 8px;
+                font-weight: 5px;
+                font-size: 24px;
+                color:#FFF;
                 display: block;
                 font-family: "Acronym",sans-serif;
         }
@@ -50,6 +66,10 @@ if (is_user_logged_in()) {
         input[type=url],
         select,
         textarea {
+                width: 400px;
+                height: 40px;
+                margin-top: 30px;
+                border-radius: 5px;
                 border: 1px solid #DDD;
                 -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
                 box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
@@ -75,21 +95,40 @@ if (is_user_logged_in()) {
                 padding: 10px 20px 10px 20px;
                 border: solid #32a840 2px;
                 text-decoration: none;
+                margin-left: 150px ;
         }
-
+        
         .btn1 {
+                text-align: center;
                 width: 331px;
         }
 
         .login-title {
-                font-family: Arial;
+                font-family: 'Lobster', cursive;;
+                font-weight: 2px;
+                font-size: 46px;
+                text-align: center;
+                
         }
-</style>
+        .form{  
+                
+                margin: 80px 30px 20px 30px;
+                
+                padding: 20px 40px;
 
+        }
+        .button-primary:hover {
+                
+                background-color: yellowgreen;
+
+        }
+        
+</style>
+       
         <div class="login-area">
                 <div class="note">
-                        <h3 class="login-title">Đăng nhập</h3>
-                        <p>Hãy sử dụng tài khoản của bạn để đăng nhập vào website. Nếu chưa có tài khoản, <a href="register"><b style="color: red">đăng ký tại đây</b></a>.</p>
+                        <h3 class="login-title">Login</h3>
+                        
                 </div>
                 <hr>
                 <div class="form">
@@ -97,13 +136,14 @@ if (is_user_logged_in()) {
                         $args = array(
                                 'redirect'       => site_url($_SERVER['REQUEST_URI']),
                                 'form_id'        => 'dangnhap',
-                                'label_username' => __('Tên tài khoản'),
-                                'label_password' => __('Mật khẩu'),
-                                'label_remember' => __('Ghi nhớ'),
-                                'label_log_in'   => __('Đăng nhập'),
+                                'label_username' => __('Username:'),
+                                'label_password' => __('Password:'),
+                                'label_remember' => __('Save:'),
+                                'label_log_in'   => __('Login'),
                         );
                         wp_login_form($args);
                         ?>
+                        <p style="padding-top: 20px;">Please use your account to log into the website. If you don't have an account,<a href="<?php echo get_home_url() ?>/register"><b style="color: screen">register here.</b></a>.</p>
                 </div>
                 <?php
                 $login  = (isset($_GET['login'])) ? $_GET['login'] : 0;
@@ -118,4 +158,4 @@ if (is_user_logged_in()) {
         </div>
 
 <?php }
-get_footer(); ?>
+ ?>

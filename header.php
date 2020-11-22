@@ -52,7 +52,7 @@
 	    <nav id="sidr-right-top" class="mobile-menu sidr right">
 	      	<div class="site-branding text-center">
                 <div class="site-logo">
-                <a href="#" class="custom-logo-link" rel="home" aria-current="page"><img width="208" height="63" src="<?php echo get_stylesheet_directory_uri().'/assets/uploads/BEE.png'; ?>" class="custom-logo" alt="Game For Kids"></a>	          		</div>
+                <a href="<?php echo get_home_url() ?>" class="custom-logo-link" rel="home" aria-current="page"><img width="208" height="63" src="<?php echo get_stylesheet_directory_uri().'/assets/uploads/BEE.png'; ?>" class="custom-logo" alt="Game For Kids"></a>	          		</div>
                         <div id="mobile-site-header">
                             Game For Kids
                         </div>
@@ -66,28 +66,28 @@
             <div class="collapse navbar-collapse" id="navbar-list-2">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/blogs">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Games</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/games">Games</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/courses">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Info</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/info">Info</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" href="<?php echo get_home_url() ?>/register">Register</a>
                     </li>
                 </ul>
             </div>

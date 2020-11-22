@@ -148,7 +148,8 @@ function kids_education_scripts() {
 
     wp_enqueue_style( 'front-page-style', get_template_directory_uri() . '/assets/css/front-page.css', array(), '' );
 
-
+    wp_enqueue_style( 'page-intro-style', get_template_directory_uri() . '/assets/css/page-intro.css', array(), '' );
+    
     //scripts 
     wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/preload.js',array(),false,'all');
 
@@ -318,6 +319,7 @@ function wpsites_default_post_image( $html ) {
  
 	return $html;
 }
+
 
 
 ?>

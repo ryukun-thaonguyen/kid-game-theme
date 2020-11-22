@@ -1,5 +1,5 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="article-content-single">
+<article style="margin-right: 50px;" id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="article-content-single">
 	<div class="blog-post-wrap full-width" >
 
 		<div class="entry-title">

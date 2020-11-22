@@ -5,11 +5,57 @@
 ?>
 <?php   
 if(!is_user_logged_in()){
-header("Location: http://localhost/manh/theme/login-page/");}
+header("Location: http://localhost/manh/theme/login/");}
 else{
 ?>
 <?php get_header(); ?>
 
+<style>
+        .numberCircle {
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                padding: 4px;
+                background: #fff;
+                border: 2px solid red;
+                color: #666;
+                text-align: center;
+                font-family: Lucida Console, Courier, monospace;
+        }
+
+        .level-container {
+                position: relative;
+        }
+
+        .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 12px;
+                color: red;
+        }
+
+        .img {
+                width: 100%;
+                height: auto;
+        }
+        .hvr-bounce-in {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        }
+        .hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        }
+</style>
 <div id= "main"> 
     <div id="video" class="hidden-sm hidden-xs en">
             <video width="1920" id="video-play" muted="muted" autoplay="true" height="1080"  >
@@ -19,7 +65,6 @@ else{
             <div id="level">
                     <img onclick="nextLevel()" src="<?php echo get_template_directory_uri() ?>/assets/uploads/nexticon.png" alt="">
                     <h2>Level 2</h2>
-                    
             </div>
     </div>
     <div class="achievements">
@@ -29,11 +74,9 @@ else{
                                 <div>
                                         <p>Complete the chart below to reach the next Level</p>
                                         <div style="width: 100%;  background-color: #ddd;">
-                                                <div style="text-align: right; width: 60%; background-color: green; color: white;">60%</div>
+                                                <div id="progess" style="text-align: right; background-color: green; color: white;"></div>
                                         </div>
-                                        <center>
-                                                6/7
-                                        </center>
+
                                 </div>
 
 
@@ -43,18 +86,10 @@ else{
 
                 <div class="_3Gj5_">
                         <div class="_3JPwy">    
-                                <h2 class="_32T7z"><b class="_3BY7E">Levels completed:</b></h2>
-                                <div style="display: flex;">
-                                <script>
-                                        var i;
-                                        document.getElementById(levelCompleted).innerHTML = i;
-                                        for (i = 0; i =  levelCompleted; i++) {
-                                                </script>
-                                                <div class="numberCircle" ><span id="levelCompleted"></span></div>
-                                                <script>   
-                                        }
-                                </script>
-                                </div>
+                                <h2 class="_32T7z"><b class="_3BY7E">Game completed:</b></h2>
+                                <div id="game_completed" style="display: flex;">
+                                
+                               </div>
                                 
                         </div>
 
@@ -97,7 +132,7 @@ else{
             </iframe>
             <div class= "game-function">
                     <a href="" id="link-game" > 
-                            <button> Les't Go </button>
+                            <button> Let Go! </button>
                     </a>
             </div>  
     </div>         

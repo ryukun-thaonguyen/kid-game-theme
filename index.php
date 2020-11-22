@@ -75,38 +75,40 @@
 
 
     <div class="typesGame">
-        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-animal.png" alt=""></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-character.png" alt=""></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-game.png" alt=""></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-racing.png" alt=""></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-words.png" alt=""></li>
+        <li class="game__type-animal game__type">
+          <a href="<?php echo get_template_directory_uri().'/introduction-about-how-to-play-games'; ?>">
+            <img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-animal.png" alt="">
+            <h4> Game about animal</h4>
+          </a>
+       
+ </li>
+        <li class="game__type-character game__type">
+        <a href="<?php echo get_template_directory_uri().'/introduction-about-how-to-play-games'; ?>">
+            <img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-character.png" alt="">
+            <h4>Game about character</h4>
+          </a>
+        </li>
+        <li class="game__type-computer game__type">
+        <a href="<?php echo get_template_directory_uri().'/introduction-about-how-to-play-games'; ?>">
+            <img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-game.png" alt="">
+            <h4>Game about computer</h4>
+          </a>
+        </li>
+        <li class="game__type-racing game__type">
+        <a href="<?php echo get_template_directory_uri().'/introduction-about-how-to-play-games'; ?>">
+            <img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-racing.png" alt="">
+            <h4>Game about racing</h4>
+          </a>
+        </li>
+        <li class="game__type-words game__type">
+        <a href="<?php echo get_template_directory_uri().'/introduction-about-how-to-play-games'; ?>">
+            <img src="<?php echo get_template_directory_uri()?>./assets/uploads/game__type-words.png" alt="">
+            <h4>Game about words</h4>
+          </a>
+        </li>
     </div>
 
-    <div class="newGame">
-      <div class=" card__newGame">
 
-      </div>
-      <div class=" card__newGame">
-
-      </div>
-      <div class=" card__newGame">
-
-      </div>
-      <div class=" card__newGame">
-
-      </div>
-      <div class=" card__newGame">
-
-      </div>
-      
-    </div>
-
-    <div class="shootsGame">
-
-    </div>
-    <div class="racingGame">
-
-    </div>
   </div>
 
 
